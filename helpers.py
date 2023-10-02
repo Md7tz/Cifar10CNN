@@ -38,14 +38,12 @@ def get_train_val_data_loaders(batch_size, valid_size, transforms, num_workers):
     train_loader = DataLoader(
         trainval_data,
         batch_size,
-        shuffle=True,
         sampler=train_sampler,
         num_workers=num_workers,
     )
     valid_loader = DataLoader(
         trainval_data,
         batch_size,
-        shuffle=False,
         sampler=valid_sampler,
         num_workers=num_workers,
     )
