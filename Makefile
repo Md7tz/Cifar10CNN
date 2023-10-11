@@ -1,5 +1,5 @@
 default: help
-.PHONY: install format lint
+.PHONY: install format lint clean
 
 help:
 	@echo "install - install dependencies"
@@ -14,3 +14,7 @@ format:
 
 lint:
 	flake8 *.py
+
+clean:
+	rm -rf __pycache__
+	rm -rf data
